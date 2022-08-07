@@ -1,6 +1,0 @@
-openssl
-https://www.youtube.com/watch?v=wzbf9ldvBjM
-https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-web_servers#s2-apache-mod_ssl
-https://stackoverflow.com/questions/10175812/how-to-generate-a-self-signed-ssl-certificate-using-openssl
-https://stackoverflow.com/questions/61552079/how-to-use-openssl-for-self-signed-certificates-with-custom-ca-and-proper-san-se
-https://stackoverflow.com/questions/11947295/how-to-generate-openssl-certificate-with-expiry-less-than-one-day
