@@ -1,0 +1,208 @@
+hl-events project me 
+Pahla task login karne ke bad manage trip wala kam
+
+Step 1- mytrips_v1.6.js me change route route("eventmie.trip_show", [e])
+
+Step 2-  Route::prefix('/allevents')->group(function () use ($namespace) {
+       
+        $tripcontroller = $namespace.'\EventsController';  
+
+        Route::get('/{mytrips}', "$tripcontroller@tripshow")->name('trip_show'); 
+		
+Step 3- go to EventsController add New Function 
+
+		 public function tripshow(Trip $mytrips, $view = 'eventmie::tripsmy.show', $extra = [])
+    {
+        // it is calling from model because used subquery
+        log::info($mytrips);
+        $event = $this->trip->get_trip($mytrips->slug);
+        log::info('user evnets hai');
+        log::info($event);
+        if(!$event->status || !$event->publish)
+            abort('404');
+
+        // online event - yes or no
+        $event                  = $event->makeVisible('online_location');
+        // check event is online or not
+        $event['online_location']    = (!empty($event['online_location'])) ? 1 : 0; 
+
+        // check if category is disabled 
+        $category            = $this->tripcategory->get_event_category($event['category_id']); 
+        if(empty($category))
+            abort('404');
+
+        $tags                = $this->tag->get_event_tags($event['id']);
+        $max_ticket_qty      = (int) setting('booking.max_ticket_qty'); 
+        $google_map_key      = setting('apps.google_map_key');
+
+        // group by type
+        $tag_groups          = [];
+        if($tags)
+            $tag_groups          = collect($tags)->groupBy('type');
+        
+        // check free ticket
+        $free_tickets        = $this->ticket->check_free_tickets($event['id']);
+
+        // event country
+        $country            = $this->country->get_event_country($event['country_id']);
+
+        // check event and or not 
+        $ended  = false;
+
+        // if event is repetitive then event will be expire according to end date
+        if($event['repetitive'])
+        {
+            if(\Carbon\Carbon::now()->format('Y/m/d') > \Carbon\Carbon::createFromFormat('Y-m-d', $event['end_date'])->format('Y/m/d'))
+                $ended = true;
+        }
+        else 
+        {
+            // none repetitive event so check start date for event is ended or not
+            if(\Carbon\Carbon::now()->format('Y/m/d') > \Carbon\Carbon::createFromFormat('Y-m-d', $event['start_date'])->format('Y/m/d'))
+                $ended = true;    
+        }
+        
+        $is_paypal = $this->is_paypal();
+
+        // get tickets
+        $tickets_data   = $this->get_tickets($event['id']);
+        $tickets        = $tickets_data['tickets'];
+        $currency       = $tickets_data['currency'];
+        $booked_tickets = $tickets_data['booked_tickets'];
+        $total_capacity = $tickets_data['total_capacity'];
+
+        return Eventmie::view($view, compact(
+            'event', 'tag_groups', 'max_ticket_qty', 'free_tickets', 
+            'ended', 'category', 'country', 'google_map_key', 'is_paypal', 
+            'tickets', 'currency', 'booked_tickets', 'total_capacity', 'extra'));
+    }
+	jo modal nhi hai wah sab add karna hai
+	
+Step 4- Go to blade file => tripsmy.show.blade.php
+
+second task 
+Holiday project me 
+
+All Website user wala
+         And
+All Tour Operator User 
+ 
+Step 1-> Welcome Blade file me
+ 
+ <div id="mainWrap">
+        <div class="col-lg-12 bgtop-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 toptxt-head">
+                        <div>
+                        <h3 class="text-center mt-5 head4">All Website user: {{ $moreactivated}}</h3>
+                        </div>                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="gallery js-flickity lgx-schedule lgx-schedule-dark" data-flickity-options='{ "wrapAround": true }'  style="background-image: url(http://hl-events/eventmie-assets?path=img%2Fbg-pattern.png); background-color:#00192F">
+            @foreach($returnuser as  $active)
+            <div class="card text-center ml-1">
+                        <div class="card-body ml-4" style="">
+                        <img src="{{ asset('../image/img_avatar.png') }}" alt="Avatar" class="avatar"
+                            style="height:80px; width:75px; margin: 0 30px;border-radius:50%;"/>
+                    <h4  style="font-size: 18px; color:white;"> <a> {{Str::limit($active->Name,10) }}</a></h4>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+	
+	   <div id="mainWrap">
+        <div class="col-lg-12 bgtop-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 toptxt-head">
+                        <div>
+                            <h3 class="text-center mt-5 head4">All Tour Operator User: {{$touropretorsub}}</h3>
+                        </div>                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="gallery js-flickity lgx-schedule lgx-schedule-dark" data-flickity-options='{ "wrapAround": true }'  style="background-image: url(http://hl-events/eventmie-assets?path=img%2Fbg-pattern.png); background-color:#00192F">
+            @foreach($allwebsiteuser as  $trip)
+            <div  class="card text-center ml-1">
+                    <div class="card-body ml-4" style="">
+                    <img src="{{ asset('../image/img_avatar.png') }}" alt="Avatar" class="avatar"
+                            style="height:80px; width:75px; margin: 0 30px;border-radius:50%;">
+                            <h4  style="font-size: 18px; color:white;"> <a  
+                        href="{{ route('eventmie.opreterdetail',[ 'name' => str_slug($trip->slug) ]) }}"> {{Str::limit($trip->name,10) }}</a></h4>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+	
+Step 2-> WelcomeController 
+
+ $moreactivated      = DB::table('rvsps')->where('Permission','Approve')->distinct()->count('emailid');
+   $returnuser          = $this->rvsp->all_website_user();
+ $allwebsiteuser          = $this->userevent->all_operator_user();
+   $touropretorsub       = $this->userevent->where('role_id','3')->distinct()->count('email');
+   
+      return Eventmie::view($view, 
+            compact(
+                'featured_events', 'top_selling_events', 
+                'upcomming_events', 'banners', 'upcomming_trip',
+                'categories', 'posts', 'currency', 'cities_events','events_cities','latest_trips','latest_events','eventcategories', 
+                'extra','moreactivated','returnuser','allwebsiteuser','touropretorsub'
+            ));    
+			
+			
+	  $this->rvsp            = new Rvsp;
+        $this->userevent        = new Userevent;
+		
+		
+use Classiebit\Eventmie\Models\Rvsp;
+use Classiebit\Eventmie\Models\Userevent;
+
+
+step 3 modal add Userevent.php  and Rvsp.php me kuchh function add kiya gaya hai
+		
+   public static function all_website_user()
+    
+    {
+        log::info('yaha tak aa gaya dharmendra');
+        return Rvsp::where('Permission','Approve')->get();
+         log::info('yaha tak aa gaya dharmendra');
+        log::info($touropretor);
+        return $touropretor;
+          }
+		  
+		  
+		  
+		  how to remain data after edit in country,state,city=============
+when edit location add inside mount data====
+ this.getMyEvent().then((function(t) { e.edit_location(), e.get_states(), e.get_cities() }))//add e.get_states(),
+step 2 declare data
+    data() { return { venue: null, address: null, country_id: 0, city_id: 0, state_id: 0, zipcode: null, countries: [], states: [], cities: [], latitude: null, longitude: null, online_event: 0, online_location: this.event_ck.online_location } },
+step 3:
+in edit location==
+ edit_location() {
+     Object.keys(this.event).length > 0 && 
+	 (this.venue = this.event.venue, this.country_id = this.event.country_id ?
+	 this.event.country_id : 0, this.address = this.event.address, this.city_id =
+	 this.event.city_id ? this.event.city_id : 0, this.state_id = this.event.state_id ?
+	 this.event.state_id : 0, this.zipcode = this.event.zipcode, this.latitude = this.event.latitude, 
+	 this.longitude = this.event.longitude, this.online_event = this.event.online_event,
+	 this.online_location = this.event.online_location)
+  },
+		  
+		  

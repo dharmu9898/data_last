@@ -1,0 +1,139 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.td {
+  border: 5px solid black !important;
+  }   
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .centered4 {
+    position: absolute;
+    top: 15%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+  }
+  .centered1 {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+    font-size:18;
+  }
+  .centered2 {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+    font-size:16;
+  }
+  .centered3 {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+    font-size:14;
+  }
+  .bottom-left3 {
+    position: absolute;
+    bottom: 0px;
+    left: 16px;
+    color:white
+  }
+  a:link {
+    color: white;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: white;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: #CBCBE5;
+    text-decoration:none;
+  }
+  
+  /* selected link */
+  a:active {
+      color: #e5e4e5;
+     
+  }
+  .col-9
+  {
+  
+  
+  }
+  .text-block {
+    position: absolute;
+    bottom: 45px;
+    left: 15px;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .text-block1 {
+    position: absolute;
+    bottom: 18px;
+    left: 15px;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+    .content {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.1); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 93%;
+    padding: 10px;
+  }
+  
+  
+  @import url('https://fonts.googleapis.com/css2?family=Peddana&family=Roboto:wght@300&display=swap');
+  p{
+      font-family: 'Peddana', serif;
+      word-spacing: 4px; 
+  }
+  img:hover {
+    box-shadow: 0px 0px 20px #5B7CFF;
+    z-index: 2;
+    -webkit-transition: all 100ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 100ms ease-in;
+    -ms-transform: scale(1.5);
+    -moz-transition: all 100ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 100ms ease-in;
+    transform: scale(1.1);
+    border-radius:10px;
+  }
+  /* @media only screen and (max-width: 1200px) {
+    .tab1{
+  margin-left:0%;
+  }
+  } */
+  
+  
+  
+   
+  /* @media only screen and (max-width: 1200px) {
+    .tab1{
+  margin-left:0%;
+  }
+  } */
+  

@@ -1,0 +1,21 @@
+steps of video
+Why Should You Join this Series?
+What is Vue js?
+History
+Vue js competition
+What we will learn in this Series
+Code and Other Help
+
+
+kya vue ja kisi dusre me style nhi chahie to to ush me
+
+scoped likh dene se sirf ushi file me change ho ga
+
+
+->whereDate('trips.start_date', '>', Carbon::now())->orderBy('start_date', 'asc')
+
+
+Task::whereDate('datetime', '>', Carbon::now())->orderBy('datetime', 'asc')->get();
+
+
+'start_date', 'desc'

@@ -1,0 +1,40 @@
+@extends('eventmie::layouts.app')
+
+@section('title') @lang('eventmie-pro::em.operator') @endsection
+
+
+@section('content')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+<section>
+    <div class="lgx-slider welcome-slider">
+        <div class="lgx-banner-style">
+            <div class="lgx-inner">
+                <div id="lgx-main-slider" class="owl-carousel lgx-slider-navbottom">
+                    <!--Vue slider-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container card" style="margin-top:1%;">
+    <h3 class="text-center "></h3>
+
+
+
+
+
+  
+</div>
+</div>
+<br>
+
+
+@endsection

@@ -1,0 +1,138 @@
+Dharmendra.cotocus@gmail.com
+
+
+how to print array child data in json ajax
+how to get json object first data in javascript
+Retrieving Nested JSON Array with AJAX and Outputting to an HTML List
+how to fetch data from nested child array of json in jquery datatable using ajax
+C:\Users\Cotocus$123\AndroidStudioProjects\MyApplication4
+
+How to open flutter in your project 
+
+1=> C:\Users\Cotocus$123\AppData\Local\Android\Sdk\platform-tools
+
+open cmd and this command
+
+khol kar ushi path me CMD likhe ge
+
+2=> adb connect localhost:5555
+
+this is url on app icon in flutter => https://www.youtube.com/watch?v=c36TwmYeZuY
+
+https://www.holidaylandmark.com/events/storage
+
+Flutter Scaffold
+
+  const Scaffold({  
+  Key key,  
+  this.appBar,  
+  this.body,  
+  this.floatingActionButton,  
+  this.floatingActionButtonLocation,  
+  this.persistentFooterButtons,  
+  this.drawer,  
+  this.endDrawer,  
+  this.bottomNavigationBar,  
+  this.bottomSheet,  
+  this.floatingActionButtonAnimator,  
+  this.backgroundColor,  
+  this.resizeToAvoidBottomPadding = true,  
+  this.primary = true,  
+})   
+
+which widget is use to write title in navbar
+
+Ans=> Aapbar in side Scaffold
+
+=> navbar me menu banane ke liye kaun button use karte hai
+Ans=> PopupMenu Button
+
+=> kaun button use karte scroll rahne par bhi  button ka position same place me rahe hai
+Ans=> Floating Action Button
+
+=> popup lane ke liye kya use karte hai
+Ans=> Alert dielog
+
+=> routing  kis function ke andar rehta hai
+Ans=>  onpresh and onetap & Navigatorpush
+
+=> data get karte colunm structure ke liye kya use karte hai
+Ans=> Lists
+
+=> tab structure ke liye kaise use karte hai
+Ans=> tabs ,TabBarView
+
+itemCount: filteredUsers.length,
+itemBuilder: (BuildContext context, int index) {
+
+=> How to make confirm dailog in flutter in delete button
+
+Url -> https://www.kindacode.com/article/how-to-make-a-confirm-dialog-in-flutter/
+
+2127527796
+
+
+https://www.insurance21.in/maturity-calculators.php
+
+lic password 98Dharmu@98
+
+Facebook pass- devdharmu
+
+Admin password => rkgmkgskg@123
+
+
+
+01447	
+
+2000541570
+
+22/08/2001
+
+9534044658
+
+
+JS file me jab bhi koi bhi data store karate hai to axios se khojate 
+axios
+
+js file => 
+
+
+Event=> 31692==22762=70621
+
+
+trip lis=> 32692= 70721
+
+
+31692== 22762=== 70621==40416==24159==40543
+
+20247253101
+
+SELECT * FROM `country` WHERE country_id='101'
+
+Daily like and share comments 
+
+https://www.linkedin.com/company/professnow/
+https://twitter.com/ProfessNowIn
+https://www.instagram.com/professnow/
+https://www.facebook.com/groups/professnow/
+https://www.facebook.com/professnow/
+https://www.youtube.com/channel/UCbcxKNqM3LS7AEb5sMnKsug
+
+
+5 to 15 learning today js 27,28 and 33 to 39
+
+yr2022 Kreditbee copon Code
+
+
+n("i", { staticClass: "fas fa-check-circle" }) : n("i", { staticClass: "fas fa-exclamation-circle text-danger" })
+
+("em.start_date")
+
+,n("i", { staticClass: "fas fa-star fa-xs text-danger" })
+
+
+timing 54058
+details 84733
+Location 800
+Media  8568
+Iternary 54569,75974

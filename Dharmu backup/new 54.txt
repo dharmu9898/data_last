@@ -1,0 +1,26 @@
+Laravel PHP ka framework hai
+What is Framework 
+=> 
+
+
+Laravel ko Samjhane ke lie basic
+- XAMPP Ya Wamp
+- PHP
+- Composer - Bahut sara Role play karta hai, ek basic Package ya dependence manager hai, hume kisi thard party ki jarut parti hai to composer hume wah provider karta hai, ek singale command ke jarie hume  sari ki sari dependence deta hai, koi Extera tols ko add karne ke  
+
+What is M V C 
+
+M- Model 
+V- View  jitna user ko view dikhna hai wah sab hum view part me likhte hai,
+C- Controller basicaly jo humra logical part hai wah humara Controller ke ander jae ga,
+= MVC ka role aur regultion ke dekhte huaa hum kam karte hai
+
+
+Passport Your Application Reference Number is : 21-0002342028
+
+revice diebetes in 21 days
+
+
+
+
+ 

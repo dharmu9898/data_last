@@ -1,0 +1,16 @@
+Dharmendra Kumar (Laptop Details)
+
+
+System Model	Latitude E6520
+Processor	Intel(R) Core(TM) i7-2640M CPU @ 2.80GHz, 2801 Mhz, 2 Core(s), 4 Logical Processor(s)
+Installed Physical Memory (RAM)	8.00 GB
+
+
+Device name	Dharmukite
+Processor	Intel(R) Core(TM) i7-2640M CPU @ 2.80GHz   2.80 GHz
+Installed RAM	8.00 GB (7.88 GB usable)
+Device ID	E64C0BA4-4101-4C2C-9136-B9095E47ED95
+Product ID	00331-10000-00001-AA941
+System type	64-bit operating system, x64-based processor
+Pen and touch	No pen or touch input is available for this display
+

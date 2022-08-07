@@ -1,0 +1,178 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+ @media (min-width: 992px) { 
+   .navbar{
+      margin-top:0;
+      top:45px;
+    }
+}
+.button {
+				background-color: black;
+				border: none;
+				color: white;
+				padding: 20px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+			}
+
+			.button5 {border-radius: 60%;}
+
+			.button:hover {background-color: red}
+
+			.button:active {
+			  background-color: # red;
+			  box-shadow: 0 5px #666;
+			  transform: translateY(4px);
+			}
+     
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+		</style>
+		
+		<style>
+		* {
+		  box-sizing: border-box;
+		}
+		body {
+		 font-family: "Times New Roman", Times, serif;
+		}
+		.autocomplete {
+		  /*the container must be positioned relative:*/
+		  position: relative;
+		  display: inline-block;
+		}
+		input {
+		  border: 1px solid transparent;
+		  background-color: #f1f1f1;
+		  padding: 10px;
+		  font-size: 16px;
+		  color: #000000;
+		  
+		}
+		input[type=text] {
+		  background-color: #FFFFFF;
+		  width: 100%;
+		  background-image: url('assets/images/logo/search-icon.png');
+		  background-position: 10px 10px; 
+		  background-repeat: no-repeat;
+		  padding: 8px 18px 9px 40px;
+		}
+		input[type=submit] {
+		  background-color: DodgerBlue;
+		  color: #fff;
+		  cursor: pointer;
+		}
+		.autocomplete-items {
+		  position: absolute;
+		  border: 1px solid #d4d4d4;
+		  border-bottom: none;
+		  border-top: none;
+		  z-index: 99;
+		  /*position the autocomplete items to be the same width as the container:*/
+		  top: 100%;
+		  left: 0;
+		  right: 0;
+		  color: #000000;
+		}
+		.autocomplete-items div {
+		  padding: 10px;
+		  cursor: pointer;
+		  background-color: #fff; 
+		  border-bottom: 1px solid #d4d4d4; 
+		}
+		.autocomplete-items div:hover {
+		  /*when hovering an item:*/
+		  background-color: #e9e9e9; 
+		}
+		.autocomplete-active {
+		  /*when navigating through the items using the arrow keys:*/
+		  background-color: DodgerBlue !important; 
+		  color: #ffffff; 
+		}
+
+
+ 
+
+    @media only screen and (max-width: 420px) and (min-width: 260px)
+  {
+
+
+
+.table td, .table th {
+
+  font-size:12.5px;
+  padding: .16rem;
+}
+  .btn
+{
+
+  padding: .005rem .45rem;
+    font-size: 0.8rem;
+    line-height: 1.3;
+}
+.col-12 {
+  padding-right: 0;
+    padding-left: 0px;
+
+}
+
+.card-body {
+  padding: 0.00rem;
+}
+
+.table {
+margin-bottom:0.1rem;
+}
+  }
+
+/* @media only screen and (max-width: 1200px) {
+  .tab1{
+margin-left:0%;
+}
+} */
+
+
+
+ 
+/* @media only screen and (max-width: 1200px) {
+  .tab1{
+margin-left:0%;
+}
+} */

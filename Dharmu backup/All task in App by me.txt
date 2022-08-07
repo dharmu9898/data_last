@@ -1,0 +1,2650 @@
+myevent.dark 
+=> 277 91 (data: filter[index].title, mydata: filter[index].event_id),
+
+eventscount.dark
+=>249 ,151, 
+ (data: filteredUsers[index].title,
+ mydata: filteredUsers[index].event_id),
+ 
+eventsstate.dark
+=>208 ,143, 
+ (data: filteredUsers[index].title,
+ mydata: filteredUsers[index].event_id),
+
+eventscity.dark
+=>178 ,143, 
+ (data: filteredUsers[index].title,
+ mydata: filteredUsers[index].event_id),
+ 
+eventsserch.dark
+=>333 ,200,
+ (data: filteredUsers[index].title,
+ mydata: filteredUsers[index].event_id), 
+
+holiday publiher
+=====================
+27/09/2021  Today task
+
+Home dark 
+
+279 => title: 'Trip Dashboard',
+
+284 =>  title: 'Create Trip',
+
+289 => title: 'Manage Trip',
+
+PopupMenuButton => sab hatkar Event Dashboard sirf huaa hai
+
+Event/Homedashborad dark 
+
+280=>  title: 'Event Dashboard',
+
+285 =>  title: 'Create Event',
+
+290 => title: 'Manage Event',
+
+PopupMenuButton => sab hatkar Trip Dashboard sirf huaa hai
+
+
+28/09/2021  Today task
+
+filterevent.dark
+
+104 change 
+
+  onChanged: (string) {
+              _debouncer.run(() {
+                setState(() {
+                   var myfilteroperator =
+            users.where((c) => c.user_id == widget.myid).toList();
+                  filteredUsers = myfilteroperator
+                      .where((u) => (u.title
+                              .toLowerCase() 
+                              .contains(string.toLowerCase()) && u.operator_email
+                              .toLowerCase() 
+                              .contains(widget.data.toLowerCase()) ||u.slug3
+                              .toLowerCase()
+                              .contains(string.toLowerCase()) && u.operator_email
+                              .toLowerCase() 
+                              .contains(widget.data.toLowerCase())||u.state
+                              .toLowerCase()
+                              .contains(string.toLowerCase()) && u.operator_email
+                              .toLowerCase() 
+                              .contains(widget.data.toLowerCase())||u.city
+                              .toLowerCase()
+                              .contains(string.toLowerCase()) && u.operator_email
+                              .toLowerCase() 
+                              .contains(widget.data.toLowerCase())
+                      ))
+                      .toList();
+                });
+              });
+print('yeh filtered user hai');
+              print(filteredUsers);
+       
+            },
+			
+56=> final _debouncer = Debouncer(milliseconds: 500);
+
+744=>  ExpansionTile(
+                                                                  title: Text(
+                                                                    'Date',
+                                                                    style: TextStyle(
+                                                                        fontSize:
+                                                                            displayWidth(context) *
+                                                                                0.036,
+                                                                        color: Colors
+                                                                            .black,
+                                                                        fontWeight:
+                                                                            FontWeight.w500),
+                                                                  ),
+                                                                  children: <
+                                                                      Widget>[
+                                                                    ListTile(
+                                                                      title:
+                                                                          Text(
+                                                                        'Start Date: ' +
+                                                                            filteredUsers[index].start_date +
+                                                                            "  " +
+                                                                            "End Date: " +
+                                                                            filteredUsers[index].end_date,
+                                                                        style:
+                                                                            TextStyle(
+                                                                          fontSize:
+                                                                              displayWidth(context) * 0.036,
+                                                                          fontWeight:
+                                                                              FontWeight.w700,
+                                                                          color:
+                                                                              Colors.black,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                ),
+                                                                ExpansionTile(
+                                                                  title: Text(
+                                                                    'Time',
+                                                                    style: TextStyle(
+                                                                        fontSize:
+                                                                            displayWidth(context) *
+                                                                                0.036,
+                                                                        color: Colors
+                                                                            .black,
+                                                                        fontWeight:
+                                                                            FontWeight.w500),
+                                                                  ),
+                                                                  children: <
+                                                                      Widget>[
+                                                                    ListTile(
+                                                                      title:
+                                                                          Text(
+                                                                        'Start Time: ' +
+                                                                            filteredUsers[index].start_time +
+                                                                            "  " +
+                                                                            "End Time: " +
+                                                                            filteredUsers[index].end_date,
+                                                                        style:
+                                                                            TextStyle(
+                                                                          fontSize:
+                                                                              displayWidth(context) * 0.036,
+                                                                          fontWeight:
+                                                                              FontWeight.w700,
+                                                                          color:
+                                                                              Colors.black,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                ),
+                                                                ExpansionTile(
+                                                                  title: Text(
+                                                                    'Venue location',
+                                                                    style: TextStyle(
+                                                                        fontSize:
+                                                                            displayWidth(context) *
+                                                                                0.036,
+                                                                        color: Colors
+                                                                            .black,
+                                                                        fontWeight:
+                                                                            FontWeight.w500),
+                                                                  ),
+                                                                  children: <
+                                                                      Widget>[
+                                                                    ListTile(
+                                                                      title:
+                                                                          Text(
+                                                                        filteredUsers[index]
+                                                                            .venue,
+                                                                        style:
+                                                                            TextStyle(
+                                                                          fontSize:
+                                                                              displayWidth(context) * 0.036,
+                                                                          fontWeight:
+                                                                              FontWeight.w700,
+                                                                          color:
+                                                                              Colors.black,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    ListTile(
+                                                                      title:
+                                                                          Text(
+                                                                        filteredUsers[index]
+                                                                            .address,
+                                                                        style:
+                                                                            TextStyle(
+                                                                          fontSize:
+                                                                              displayWidth(context) * 0.036,
+                                                                          fontWeight:
+                                                                              FontWeight.w700,
+                                                                          color:
+                                                                              Colors.black,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                ),
+                                                                ExpansionTile(
+                                                                  title: Text(
+                                                                    'Country/state/city',
+                                                                    style: TextStyle(
+                                                                        fontSize:
+                                                                            displayWidth(context) *
+                                                                                0.036,
+                                                                        color: Colors
+                                                                            .black,
+                                                                        fontWeight:
+                                                                            FontWeight.w500),
+                                                                  ),
+                                                                  children: <
+                                                                      Widget>[
+                                                                    ListTile(
+                                                                      title:
+                                                                          Text(
+                                                                        filteredUsers[index].slug3.replaceAll(RegExp(r"<[^>]*>"), ' ') +
+                                                                            '/' +
+                                                                            filteredUsers[index].state.replaceAll(RegExp(r"<[^>]*>"),
+                                                                                ' ') +
+                                                                            '/' +
+                                                                            filteredUsers[index].city,
+                                                                        style:
+                                                                            TextStyle(
+                                                                          fontSize:
+                                                                              displayWidth(context) * 0.036,
+                                                                          fontWeight:
+                                                                              FontWeight.w700,
+                                                                          color:
+                                                                              Colors.black,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                ),
+                                                                ExpansionTile(
+                                                                  title: Text(
+                                                                    'Longitude/Latitude',
+                                                                    style: TextStyle(
+                                                                        fontSize:
+                                                                            displayWidth(context) *
+                                                                                0.036,
+                                                                        color: Colors
+                                                                            .black,
+                                                                        fontWeight:
+                                                                            FontWeight.w500),
+                                                                  ),
+                                                                  children: <
+                                                                      Widget>[
+                                                                    ListTile(
+                                                                      title:
+                                                                          Text(
+                                                                        filteredUsers[index].latitude.replaceAll(RegExp(r"<[^>]*>"), ' ') +
+                                                                            '/' +
+                                                                            filteredUsers[index].state.replaceAll(RegExp(r"<[^>]*>"),
+                                                                                ' ') +
+                                                                            '/' +
+                                                                            filteredUsers[index].longitude,
+                                                                        style:
+                                                                            TextStyle(
+                                                                          fontSize:
+                                                                              displayWidth(context) * 0.036,
+                                                                          fontWeight:
+                                                                              FontWeight.w700,
+                                                                          color:
+                                                                              Colors.black,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                ),
+                                                                ExpansionTile(
+                                                                  title: Text(
+                                                                    'Zipcode',
+                                                                    style:
+                                                                        TextStyle(
+                                                                      fontSize:
+                                                                          displayWidth(context) *
+                                                                              0.036,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w500,
+                                                                      color: Colors
+                                                                          .black,
+                                                                    ),
+                                                                  ),
+                                                                  children: <
+                                                                      Widget>[
+                                                                    ListTile(
+                                                                      title:
+                                                                          Text(
+                                                                        filteredUsers[index]
+                                                                            .zipcode,
+                                                                        style:
+                                                                            TextStyle(
+                                                                          fontSize:
+                                                                              displayWidth(context) * 0.036,
+                                                                          fontWeight:
+                                                                              FontWeight.w700,
+                                                                          color:
+                                                                              Colors.black,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                ),
+382=> same change uper
+
+and publish unpublish  and edit buttom destorie
+
+29/09/2021 task 
+
+store.dark me 
+/ hatna hai sab ka
+
+manageimage.dark
+
+some change delete buttom
+=> 242 to 330 
+		  FlatButton(
+                          onPressed: () {
+                            showCupertinoDialog(
+                                context: context,
+                                builder: (BuildContext ctx) {
+                                  return CupertinoAlertDialog(
+                                    title: Text('Please Confirm'),
+                                    content: Text(
+                                        'Are you sure to delete the trip image?'),
+                                    actions: [
+                                      // The "Yes" button
+                                      CupertinoDialogAction(
+                                         child: Text('Yes'),
+                                        isDefaultAction: true,
+                                        isDestructiveAction: true,
+                                        onPressed: () {
+                                            setState(() {
+                                                        String trip_id =
+                                                            filteredUsers[
+                                                                    index]
+                                                                .trip_id;
+                                                        String image_name =
+                                                            filteredUsers[
+                                                                    index]
+                                                                .image_name;
+                                                        print(
+                                                            'yanhaa hoga profile');
+                                                        widget._isLoading =
+                                                            true;
+                                                        Tripmage alldata =
+                                                            Tripmage(
+                                                          trip_id: trip_id,
+                                                          image_name:
+                                                              image_name,
+                                                        );
+                                                        print(
+                                                            'yeh hoga profile');
+                                                        print(
+                                                            'profile to json' +
+                                                                imageToJson(
+                                                                    alldata));
+                                                        print(alldata);
+                                                        _apiService
+                                                            .imagedelete(
+                                                                alldata)
+                                                            .then((response) {
+                                                          widget._isLoading =
+                                                              false;
+                                                          print('profile to mera hi json' +
+                                                              imageToJson(
+                                                                  alldata));
+
+                                                          if (response ==
+                                                              true) {
+                                                            print(
+                                                                'yeh aata hai');
+
+                                                            Navigator.pop(
+                                                                context);
+                                                            showsucessrepubDialog(
+                                                                context:
+                                                                    context);
+                                                          } else {
+                                                            print(
+                                                                'yeh  naho aata hai');
+                                                          }
+                                                        });
+                                                      });
+                                        },
+                                       
+                                      ),
+                                      // The "No" button
+                                      CupertinoDialogAction(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text('No'),
+                                        isDefaultAction: false,
+                                        isDestructiveAction: false,
+                                      )
+                                    ],
+                                  );
+                                });
+                          },
+                          child: Text(
+                            'Delete',
+                            style: TextStyle(color: Colors.red),
+                          ),
+                        ),
+30/09/2021 task
+
+Managetour.dark file me
+ 430 to 495 change delete style
+           FlatButton(
+                          onPressed: () {
+                            showCupertinoDialog(
+                                context: context,
+                                builder: (BuildContext ctx) {
+                                  return CupertinoAlertDialog(
+                                    title: Text('Please Confirm'),
+                                    content: Text(
+                                        'Are you sure to delete the Trip?'),
+                                    actions: [
+                                      // The "Yes" button
+                                      CupertinoDialogAction(
+                                        child: Text('Yes'),
+                                        isDefaultAction: true,
+                                        isDestructiveAction: true,
+                                        onPressed: () {
+                                          setState(() {
+                                            String tour_id =
+                                                filteredUsers[index].tour_id;
+
+                                            print('yanhaa hoga profile');
+                                            widget._isLoading = true;
+                                            User alldata = User(
+                                              tour_id: tour_id,
+                                            );
+                                            print('yeh hoga profile');
+                                            print('profile to json' +
+                                                userToJson(alldata));
+                                            print(alldata);
+                                            _apiService
+                                                .tripdelete(alldata)
+                                                .then((response) {
+                                              widget._isLoading = false;
+                                              print('profile to mera hi json' +
+                                                  userToJson(alldata));
+
+                                              if (response == true) {
+                                                print('yeh aata hai');
+                                                Navigator.pop(context);
+                                                showsucessrepubDialog(
+                                                    context: context);
+                                              } else {
+                                                print('yeh  naho aata hai');
+                                              }
+                                            });
+                                          });
+                                        },
+                                      ),
+                                      // The "No" button
+                                      CupertinoDialogAction(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text('No'),
+                                        isDefaultAction: false,
+                                        isDestructiveAction: false,
+                                      )
+                                    ],
+                                  );
+                                });
+                          },
+                          child: Text(
+                            'Delete',
+                            style: TextStyle(color: Colors.red),
+                          ),
+                        ),
+Manageiternary.dark file 
+=> 115 to 183
+                  FlatButton(
+                          onPressed: () {
+                            showCupertinoDialog(
+                                context: context,
+                                builder: (BuildContext ctx) {
+                                  return CupertinoAlertDialog(
+                                    title: Text('Please Confirm'),
+                                    content: Text(
+                                        'Are you sure to delete the Iternary?'),
+                                    actions: [
+                                      // The "Yes" button
+                                      CupertinoDialogAction(
+                                        child: Text('Yes'),
+                                        isDefaultAction: true,
+                                        isDestructiveAction: true,
+                                        onPressed: () {
+                                          setState(() {
+                                            String tour_id =
+                                                filteredUsers[index].tour_id;
+                                            String Days =
+                                                filteredUsers[index].Days;
+                                            print('yanhaa hoga profile');
+                                            widget._isLoading = true;
+                                            Iternarydetail alldata =
+                                                Iternarydetail(
+                                              tour_id: tour_id,
+                                              Days: Days,
+                                            );
+                                            print('yeh hoga profile');
+                                            print('profile to json' +
+                                                iternaryToJson(alldata));
+                                            print(alldata);
+                                            _apiService
+                                                .iternarydelete(alldata)
+                                                .then((response) {
+                                              widget._isLoading = false;
+                                              print('profile to mera hi json' +
+                                                  iternaryToJson(alldata));
+
+                                              if (response == true) {
+                                                print('yeh aata hai');
+                                                Navigator.pop(context);
+                                                showsucessrepubDialog(
+                                                    context: context);
+                                              } else {
+                                                print('yeh  naho aata hai');
+                                              }
+                                            });
+                                          });
+                                        },
+                                      ),
+                                      // The "No" button
+                                      CupertinoDialogAction(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text('No'),
+                                        isDefaultAction: false,
+                                        isDestructiveAction: false,
+                                      )
+                                    ],
+                                  );
+                                });
+                          },
+                          child: Text(
+                            'Delete',
+                            style: TextStyle(color: Colors.red),
+                          ),
+                        ),
+Managetour.dark file me 
+
+republish me 456 add ->  Navigator.of(context).pop();
+validate ke lie 411 ->    if (datetime
+                                                                    .isEmpty) {
+                                                                  showdateDialog(
+                                                                      context:
+                                                                          context);
+																		  
+Unpublish pop 110 to 181 ->  FlatButton(
+                                onPressed: () {
+                                  showCupertinoDialog(
+                                      context: context,
+                                      builder: (BuildContext ctx) {
+                                        return CupertinoAlertDialog(
+                                          title: Text('Please Confirm'),
+                                          content: Text(
+                                              'Are you sure to Unpublish the Trip?'),
+                                          actions: [
+                                            // The "Yes" button
+                                            CupertinoDialogAction(
+                                              child: Text('Yes'),
+                                              isDefaultAction: true,
+                                              isDestructiveAction: true,
+                                              onPressed: () {
+                                                setState(() {
+                                                  print('yanhaa hoga profile');
+                                                  widget._isLoading = true;
+                                                  String tour_id =
+                                                      filteredUsers[index]
+                                                          .tour_id;
+                                                  String TripTitle =
+                                                      filteredUsers[index]
+                                                          .TripTitle;
+                                                  User alldata = User(
+                                                    TripTitle: TripTitle,
+                                                    tour_id: tour_id,
+                                                  );
+                                                  print('yeh hoga profile');
+                                                  print('profile to json' +
+                                                      userToJson(alldata));
+                                                  print(alldata);
+                                                  _apiService
+                                                      .unpubtrip(alldata)
+                                                      .then((response) {
+                                                    widget._isLoading = false;
+                                                    print(
+                                                        'profile to mera hi json' +
+                                                            userToJson(
+                                                                alldata));
+
+                                                    if (response == true) {
+                                                      print('yeh aata hai');
+                                                      Navigator.pop(context);
+                                                      showsucessunpubDialog(
+                                                          context: context);
+                                                    } else {
+                                                      print(
+                                                          'yeh  naho aata hai');
+                                                    }
+                                                  });
+                                                });
+                                              },
+                                            ),
+                                            // The "No" button
+                                            CupertinoDialogAction(
+                                              onPressed: () {
+                                                Navigator.of(context).pop();
+                                              },
+                                              child: Text('No'),
+                                              isDefaultAction: false,
+                                              isDestructiveAction: false,
+                                            )
+                                          ],
+                                        );
+                                      });
+                                },
+                                child: Text(
+                                  'Unpublish',
+                                  style: TextStyle(color: Colors.orange),
+                                ),
+                              )
+Publish 183 to 287 -> FlatButton(
+                                    onPressed: () {
+                                      showCupertinoDialog(
+                                          context: context,
+                                          builder: (BuildContext ctx) {
+                                            return CupertinoAlertDialog(
+                                              title: Text('Please Confirm'),
+                                              content: Text(
+                                                  'Are you sure to publish the trip?'),
+                                              actions: [
+                                                // The "Yes" button
+                                                CupertinoDialogAction(
+                                                  child: Text('Yes'),
+                                                  isDefaultAction: true,
+                                                  isDestructiveAction: true,
+                                                  onPressed: () {
+                                                    final date2 =
+                                                        DateTime.now();
+                                                    final tripdates =
+                                                        filteredUsers
+                                                            .elementAt(0)
+                                                            .datetime;
+                                                    var parsedDate =
+                                                        DateTime.parse(
+                                                            tripdates);
+                                                    final difference = date2
+                                                        .difference(parsedDate)
+                                                        .inDays;
+                                                    print(parsedDate);
+                                                    print(date2);
+                                                    print(difference);
+                                                    filteredDate = difference;
+                                                    if (filteredDate <= 48) {
+                                                      setState(() {
+                                                        print(
+                                                            'yanhaa hoga profile');
+                                                        widget._isLoading =
+                                                            true;
+                                                        String tour_id =
+                                                            filteredUsers[index]
+                                                                .tour_id;
+                                                        String TripTitle =
+                                                            filteredUsers[index]
+                                                                .TripTitle;
+                                                        User alldata = User(
+                                                          TripTitle: TripTitle,
+                                                          tour_id: tour_id,
+                                                        );
+                                                        print(
+                                                            'yeh hoga profile');
+                                                        print(
+                                                            'profile to json' +
+                                                                userToJson(
+                                                                    alldata));
+                                                        print(alldata);
+                                                        _apiService
+                                                            .pubtrip(alldata)
+                                                            .then((response) {
+                                                          widget._isLoading =
+                                                              false;
+                                                          print(
+                                                              'profile to mera hi json' +
+                                                                  userToJson(
+                                                                      alldata));
+
+                                                          if (response ==
+                                                              true) {
+                                                            print(
+                                                                'yeh aata hai');
+                                                            Navigator.of(
+                                                                    context)
+                                                                .pop();
+                                                            showsucessDialog(
+                                                                context:
+                                                                    context);
+                                                          } else {
+                                                            print(
+                                                                'yeh  naho aata hai');
+                                                          }
+                                                        });
+                                                      });
+                                                    } else {
+                                                      showsucreDialog(
+                                                          context: context);
+                                                    }
+                                                  },
+                                                ),
+                                                // The "No" button
+                                                CupertinoDialogAction(
+                                                  onPressed: () {
+                                                    Navigator.of(context).pop();
+                                                  },
+                                                  child: Text('No'),
+                                                  isDefaultAction: false,
+                                                  isDestructiveAction: false,
+                                                )
+                                              ],
+                                            );
+                                          });
+                                    },
+                                    child: Text(
+                                      'publish',
+                                      style: TextStyle(color: Colors.orange),
+                                    ),
+                                  )
+
+01/10/2021  Task Event manage Event me 
+
+Managedetails.dark file me 
+Unpublish -> 99 to 176 =>			onPressed: () {
+                                        showCupertinoDialog(
+                                            context: context,
+                                            builder: (BuildContext ctx) {
+                                              return CupertinoAlertDialog(
+                                                title: Text('Please Confirm'),
+                                                content: Text(
+                                                    'Are you sure to Unpublish the Trip?'),
+                                                actions: [
+                                                  // The "Yes" button
+                                                  CupertinoDialogAction(
+                                                    child: Text('Yes'),
+                                                    isDefaultAction: true,
+                                                    isDestructiveAction: true,
+                                                    onPressed: () {
+                                                      setState(() {
+                                                        print(
+                                                            'yanhaa hoga profile');
+                                                        widget._isLoading =
+                                                            true;
+                                                        String event_id =
+                                                            filteredUsers[index]
+                                                                .event_id;
+                                                        String title =
+                                                            filteredUsers[index]
+                                                                .title;
+                                                        Event alldata = Event(
+                                                          title: title,
+                                                          event_id: event_id,
+                                                        );
+                                                        print(
+                                                            'yeh hoga profile');
+                                                        print(
+                                                            'profile to json' +
+                                                                eventToJson(
+                                                                    alldata));
+                                                        print(alldata);
+                                                        _apiService
+                                                            .unpubevent(alldata)
+                                                            .then((response) {
+                                                          widget._isLoading =
+                                                              false;
+                                                          print(
+                                                              'profile to mera hi json' +
+                                                                  eventToJson(
+                                                                      alldata));
+
+                                                          if (response ==
+                                                              true) {
+                                                            print(
+                                                                'yeh aata hai');
+                                                            Navigator.pop(
+                                                                context);
+                                                            showsucessunpubDialog(
+                                                                context:
+                                                                    context);
+                                                          } else {
+                                                            print(
+                                                                'yeh  naho aata hai');
+                                                          }
+                                                        });
+                                                      });
+                                                    },
+                                                  ),
+                                                  // The "No" button
+                                                  CupertinoDialogAction(
+                                                    onPressed: () {
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    },
+                                                    child: Text('No'),
+                                                    isDefaultAction: false,
+                                                    isDestructiveAction: false,
+                                                  )
+                                                ],
+                                              );
+                                            });
+                                      },
+Publish -> 183 to 310 
+					  onPressed: () {
+                                        showCupertinoDialog(
+                                            context: context,
+                                            builder: (BuildContext ctx) {
+                                              return CupertinoAlertDialog(
+                                                title: Text('Please Confirm'),
+                                                content: Text(
+                                                    'Are you sure to Unpublish the Trip?'),
+                                                actions: [
+                                                  // The "Yes" button
+                                                  CupertinoDialogAction(
+                                                    child: Text('Yes'),
+                                                    isDefaultAction: true,
+                                                    isDestructiveAction: true,
+                                                    onPressed: () {
+                                                      setState(() {
+                                                        print(
+                                                            'yanhaa hoga profile');
+                                                        widget._isLoading =
+                                                            true;
+                                                        String event_id =
+                                                            filteredUsers[index]
+                                                                .event_id;
+                                                        String title =
+                                                            filteredUsers[index]
+                                                                .title;
+                                                        Event alldata = Event(
+                                                          title: title,
+                                                          event_id: event_id,
+                                                        );
+                                                        print(
+                                                            'yeh hoga profile');
+                                                        print(filteredUsers
+                                                            .elementAt(0)
+                                                            .is_publishable
+                                                            .length);
+                                                        print(
+                                                            'profile to json' +
+                                                                eventToJson(
+                                                                    alldata));
+                                                        print(alldata);
+
+                                                        bool filter1 =
+                                                            filteredUsers[index]
+                                                                .is_publishable
+                                                                .contains(
+                                                                    'location');
+                                                        bool filter2 =
+                                                            filteredUsers[index]
+                                                                .is_publishable
+                                                                .contains(
+                                                                    'timing');
+                                                        bool filter3 =
+                                                            filteredUsers[index]
+                                                                .is_publishable
+                                                                .contains(
+                                                                    'tickets');
+                                                        bool filter4 =
+                                                            filteredUsers[index]
+                                                                .is_publishable
+                                                                .contains(
+                                                                    'media');
+                                                        if (filter1 == false) {
+                                                          print(
+                                                              'inside location');
+                                                          showcompletelocDialog(
+                                                              context: context);
+                                                        } else if (filter2 ==
+                                                            false) {
+                                                          showcompletetimDialog(
+                                                              context: context);
+                                                        } else if (filter3 ==
+                                                            false) {
+                                                          showcompleteticketDialog(
+                                                              context: context);
+                                                        } else if (filter4 ==
+                                                            false) {
+                                                          showcompletemediaDialog(
+                                                              context: context);
+                                                        } else if (filteredUsers
+                                                                .elementAt(0)
+                                                                .is_publishable
+                                                                .length !=
+                                                            58) {
+                                                          showcompleteDialog(
+                                                              context: context);
+                                                        } else {
+                                                          _apiService
+                                                              .pubevent(alldata)
+                                                              .then((response) {
+                                                            widget._isLoading =
+                                                                false;
+                                                            print('profile to mera hi json' +
+                                                                eventToJson(
+                                                                    alldata));
+
+                                                            if (response ==
+                                                                true) {
+                                                              print(
+                                                                  'yeh aata hai');
+                                                              Navigator.pop(
+                                                                  context);
+                                                              showsucessDialog(
+                                                                  context:
+                                                                      context);
+                                                            } else {
+                                                              print(
+                                                                  'yeh  naho aata hai');
+                                                            }
+                                                          });
+                                                        }
+                                                      });
+                                                    },
+                                                  ),
+                                                  // The "No" button
+                                                  CupertinoDialogAction(
+                                                    onPressed: () {
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    },
+                                                    child: Text('No'),
+                                                    isDefaultAction: false,
+                                                    isDestructiveAction: false,
+                                                  )
+                                                ],
+                                              );
+                                            });
+                                      },
+login.dark file me 123 to 177 change style
+
+					      showCupertinoDialog(
+                                  context: context,
+                                  builder: (BuildContext ctx) {
+                                    return CupertinoAlertDialog(
+                                      title: Text('Select dashboard'),
+                                      actions: [
+                                        // The "Yes" button
+                                        CupertinoDialogAction(
+                                          child: Text('Tour Dashboard'),
+                                          isDefaultAction: true,
+                                          isDestructiveAction: true,
+                                          onPressed: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) => HomeScreen(
+                                                      data:
+                                                          emailController.text,
+                                                      mydata:
+                                                          myfilteroperatoremail
+                                                              .elementAt(0)
+                                                              .name,
+                                                      myid:
+                                                          myfilteroperatoremail
+                                                              .elementAt(0)
+                                                              .id)),
+                                            );
+                                          },
+                                        ),
+                                        // The "No" button
+                                        CupertinoDialogAction(
+                                          child: Text('Event Dashboard'),
+                                          isDefaultAction: false,
+                                          isDestructiveAction: false,
+                                          onPressed: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) => Homeevent(
+                                                      data:
+                                                          emailController.text,
+                                                      mydata:
+                                                          myfilteroperatoremail
+                                                              .elementAt(0)
+                                                              .name,
+                                                      myid:
+                                                          myfilteroperatoremail
+                                                              .elementAt(0)
+                                                              .id)),
+                                            );
+                                          },
+                                        )
+                                      ],
+                                    );
+                                  });
+Filtertrip.dark file 
+151 to 213          SingleChildScrollView(
+            child: Container(
+              child: Padding(
+                padding: const EdgeInsets.all(7.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: RaisedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Filterdropcat(data:widget.data)),
+                          );
+                        },
+                        child: Text('Country',
+                            style: TextStyle(
+                                fontSize: displayWidth(context) * 0.036,
+                                fontWeight: FontWeight.bold)),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 6.0,
+                    ),
+                    Expanded(
+                      child: RaisedButton(
+                        onPressed: () {
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(
+                          //       builder: (context) => Filterdropstate()),
+                          // );
+                        },
+                        child: Text('State',
+                            style: TextStyle(
+                                fontSize: displayWidth(context) * 0.036,
+                                fontWeight: FontWeight.bold)),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 6.0,
+                    ),
+                    Expanded(
+                      child: RaisedButton(
+                        onPressed: () {
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(
+                          //       builder: (context) => Filterdropcity()),
+                          // );
+                        },
+                        child: Text('City',
+                            style: TextStyle(
+                                fontSize: displayWidth(context) * 0.036,
+                                fontWeight: FontWeight.bold)),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+
+04/10/2021
+CreateTip.dark me me popup menu change
+
+Padding(
+            padding: EdgeInsets.all(8.0),
+            child: PopupMenuButton(
+              icon: Icon(Icons.more_vert),
+              tooltip: 'Account',
+              itemBuilder: (context) => [
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Createevent(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Create Event',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                 PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Manageevent(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Manage Event',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                 PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Filterev(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Search Event',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                Managetrip(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Manage Trip',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                Filtertrip(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Search Trip',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+Managetrip.dark file change		  
+
+Padding(
+            padding: EdgeInsets.all(8.0),
+            child: PopupMenuButton(
+              icon: Icon(Icons.more_vert),
+              tooltip: 'Account',
+              itemBuilder: (context) => [
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Createevent(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Create Event',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                 PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Manageevent(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Manage Event',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                 PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Filterev(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Search Event',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                Createtrip(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Create Trip',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                Filtertrip(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Search Trip',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+		  
+		  
+		  
+CreateEvent.dark file change popup menu		  
+
+		Padding(
+            padding: EdgeInsets.all(8.0),
+            child: PopupMenuButton(
+              icon: Icon(Icons.more_vert),
+              tooltip: 'Account',
+              itemBuilder: (context) => [
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Createtrip(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Create Trip',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                 PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Manageevent(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Manage Event',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                 PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Filterev(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Search Event',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                Managetrip(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Manage Trip',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                Filtertrip(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Search Trip',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+ManageEvent.dark change popup menu
+Padding(
+            padding: EdgeInsets.all(8.0),
+            child: PopupMenuButton(
+              icon: Icon(Icons.more_vert),
+              tooltip: 'Account',
+              itemBuilder: (context) => [
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Createtrip(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Create Trip',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                 PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Createevent(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Create Event',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                 PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Filterev(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Search Event',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                Managetrip(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Manage Trip',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                Filtertrip(data: widget.data)),
+                      );
+                    },
+                    child: Text(
+                      'Search Trip',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+
+Holiday me 
+===============================
+
+
+
+
+
+Opertor me 
+
+26/10/2021 
+
+Event Publish me
+=============================== 
+
+1. Jab hum end time change karte hai to stating date bhi change karna parta hai 
+
+2. jab new operator register kartna hai to manage trip aur manage event me ek vadition likh rahna chahie ki your not aadede trip & event
+
+3. footer me logout nhi hota pura logout me click karne se logout hona chahie 
+
+Website me 
+===============================
+1. jab hum event me jate hai uske bad add trip karte hai tab error aata hai uske jagah login page aana chahie
+
+
+27/10/2021 user parta
+
+optrip.dart
+
+card me 
+ onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Trip(
+                                      data: filter[index].tour_id +
+                                          '.' +
+                                          filter[index].TripTitle),
+                                ),
+                              );
+                            },
+							
+sabse uper me 
+
+									onTap: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) => Trip(
+                                                        data: filter[index]
+                                                                .tour_id +
+                                                            '.' +
+                                                            filter[index]
+                                                                .TripTitle)),
+                                              );
+                                            },
+											
+delete => ontap 197 
+
+ Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          Tripsmy(
+                                                              data:
+                                                                  filter[index]
+                                                                      .slug1),
+                                                    ),
+                                                  );
+
+
+delete => ontap 166   Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          Trips(
+                                                              data:
+                                                                  filter[index]
+                                                                      .slug),
+                                                    ),
+                                                  );
+												  
+delete =>    ontap 228                                      Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          Tripscity(
+                                                              data:
+                                                                  filter[index]
+                                                                      .slug2),
+                                                    ),
+                                                  );
+
+
+line => 67 disgne this 
+
+										 Center(
+                        child: Container(
+                          width: 500.0,
+                          height: 80.0,
+                          color: Colors.blueAccent,
+                          padding: EdgeInsets.all(25),
+                          margin: EdgeInsets.all(20),
+                          child: Text("No trip is added by this tour operator",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: displayWidth(context) * 0.050,
+                              )),
+							  
+Dashboard.dart 
+
+Widget _buildBottomBar() {
+    return CustomAnimatedBottomBar(
+      containerHeight: 80,
+      backgroundColor: Colors.blueAccent,
+      selectedIndex: _currentIndex,
+      showElevation: true,
+      itemCornerRadius: 52,
+      curve: Curves.easeIn,
+      onItemSelected: (index) => setState(() => _currentIndex = index),
+      items: <BottomNavyBarItem>[
+        BottomNavyBarItem(
+          icon: Icon(Icons.apps),
+          title: GestureDetector(onTap: () {}, child: Text('Home')),
+          activeColor: Colors.white,
+          textAlign: TextAlign.center,
+        ),
+        BottomNavyBarItem(
+          icon: Icon(Icons.tour),
+          title: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Myfuture(),
+                  ),
+                );
+              },
+              child: Text('Future Trip')),
+          activeColor: Colors.white,
+          textAlign: TextAlign.center,
+        ),
+        BottomNavyBarItem(
+          icon: Icon(Icons.tour),
+          title: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Famoustrip(),
+                  ),
+                );
+              },
+              child: Text('PopularTrip')),
+          activeColor: Colors.white,
+          textAlign: TextAlign.center,
+        ),
+        BottomNavyBarItem(
+          icon: Icon(Icons.event),
+          title: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Futureevents(),
+                  ),
+                );
+              },
+              child: Text('Future Event')),
+          activeColor: Colors.white,
+          textAlign: TextAlign.center,
+        ),
+      ],
+    );
+  }							  
+							  
+                        ),
+                      )
+					  
+notrip.dart 
+							 body: Center(
+          child: Container(
+            width: 480.0,
+            height: 90.0,
+            color: Colors.blueAccent,
+            padding: EdgeInsets.all(16),
+            margin: EdgeInsets.all(30),
+            child: Text(
+                "Trip is not found or added of this country/state/city/category/triptitle",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: displayWidth(context) * 0.050,
+                )),
+          ),
+        ));
+====================================================		
+Tripscity. Tripsstate, Tripscountary, trips .dart
+data lane ke lie =>>>>  
+
+productapi.gettripoperator().then((usersFromServer) {
+      setState(() {
+        myoperator = usersFromServer;
+        print('yeh data hia');
+        print(myoperator);
+        print('yeh count touroperator');
+        print(myoperator);
+        var myfilteroperator =
+            myoperator.where((c) => c.role_id == 3).toList().length;
+        print('yeh myfilter hai');
+        print(myfilteroperator);
+
+        filteruseroperator = myfilteroperator;
+        print('yeh hai inside new state filteruseroperator ka value');
+        print(filteruseroperator);
+      });
+    });
+
+productapi.myuserdata().then((usersFromServer) {
+      setState(() {
+        allmydata = usersFromServer;
+        var myfilteruser = allmydata
+            .where((c) => c.status == 0 || c.status == 1)
+            .toList()
+            .length;
+        print('yeh myfilter hai');
+        filteruserweb = myfilteruser;
+        print(myfilteruser);
+
+        print('yeh data hia');
+        print(filteruser.length);
+      });
+    });
+
+================================================
+   List<Operator> myoperator = List();
+   List<Webuser> allmydata = List();
+   List<Webuser> filteruser = List();
+   var productapi = new ProductAPI();
+   var filteruseroperator;
+   var filteruserweb;
+  
+=============================================
+import 'package:holiday/homescreen/models/operator.dart';
+import 'package:holiday/homescreen/models/weburser.dart';
+import 'package:holiday/homescreen/screen/websiteuser.dart';
+import 'package:holiday/homescreen/screen/eventpub.dart';
+import 'package:holiday/homescreen/screen/touroperator.dart';
+==============================================================
+
+  actions: [
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child: PopupMenuButton(
+              icon: Icon(Icons.more_vert),
+              tooltip: 'Account',
+              itemBuilder: (context) => [
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Dashboard()),
+                      );
+                    },
+                    child: Text(
+                      'Dashboard',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Eventdashboard()),
+                      );
+                    },
+                    child: Text(
+                      'Event',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Tripsearch()),
+                      );
+                    },
+                    child: Text(
+                      'Browse Trip',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Eventsearch()),
+                      );
+                    },
+                    child: Text(
+                      'Browse-Event',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+				  PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      print('yeh hai filteruseroperator ka value');
+                      print(filteruseroperator);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              Touroperator(data: filteruseroperator.toString()),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Tour Operator',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      print('yeh hai filteruseroperator ka value');
+                      print(filteruseroperator);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Eventpublisher(
+                              data: filteruseroperator.toString()),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Event Publisher',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      print('yeh hai filteruseroperator ka value');
+                      print(filteruseroperator);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                                builder: (context) =>
+                                    Websiteuser(data: filteruserweb.toString()),
+                              ),
+                      );
+                    },
+                    child: Text(
+                      'Website User',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+		
+mytripcategory me bhi
+filtercountry  ish me bhi
+
+filterstatetrip.dart me bhi
+
+filtercity.dart me bhi
+
+citycategory.dart me bhi sath me , City => MaterialPageRoute(
+                                        builder: (context) => Tripscity(
+                                            data: filteredUsers[index].city,
+                                            mydata: filteredUsers[index].slug2),
+                                      ),
+									  
+myiternary.dart me bhi 
+
+gallery.dart me bhi	
+
+
+
+yaha tak kie hai 
+=================================
+  actions: [
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child: PopupMenuButton(
+              icon: Icon(Icons.more_vert),
+              tooltip: 'Account',
+              itemBuilder: (context) => [
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Dashboard()),
+                      );
+                    },
+                    child: Text(
+                      'Dashboard',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Eventdashboard()),
+                      );
+                    },
+                    child: Text(
+                      'Event',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Tripdashboard()),
+                      );
+                    },
+                    child: Text(
+                      'Trip',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Eventsearch()),
+                      );
+                    },
+                    child: Text(
+                      'Browse-Event',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      print('yeh hai filteruseroperator ka value');
+                      print(filteruseroperator);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              Touroperator(data: filteruseroperator.toString()),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Tour Operator',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      print('yeh hai filteruseroperator ka value');
+                      print(filteruseroperator);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Eventpublisher(
+                              data: filteruseroperator.toString()),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Event Publisher',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      print('yeh hai filteruseroperator ka value');
+                      print(filteruseroperator);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              Websiteuser(data: filteruserweb.toString()),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Website User',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+tripsearch.dart me bhi	
+
+filterdropcountry.dart me bhi
+
+
+filterdropstate.dart me bhi		
+
+filterdropcity.dart me bhi		
+
+==================================	
+  actions: [
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: PopupMenuButton(
+                  icon: Icon(Icons.more_vert),
+                  tooltip: 'Account',
+                  itemBuilder: (context) => [
+                   
+                     PopupMenuItem(
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Dashboard()),
+                          );
+                        },
+                        child: Text(
+                          'Dashboard',
+                          style: TextStyle(
+                            color: Colors.blueGrey,
+                          ),
+                        ),
+                      ),
+                    ),
+                    PopupMenuItem(
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Tripdashboard()),
+                          );
+                        },
+                        child: Text(
+                          'Trip',
+                          style: TextStyle(
+                            color: Colors.blueGrey,
+                          ),
+                        ),
+                      ),
+                    ),
+                   
+                      PopupMenuItem(
+                      child: GestureDetector(
+                          
+                                 onTap: () {
+                            
+                  Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Eventdashboard()),
+                          );
+                  },
+                        child: Text(
+                          'Event',
+                          style: TextStyle(
+                            color: Colors.blueGrey,
+                          ),
+                        ),
+                      ),
+                    ),
+                      PopupMenuItem(
+                      child: GestureDetector(
+                          
+                                 onTap: () {
+                            
+                  Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Tripsearch()),
+                          );
+                  },
+                        child: Text(
+                          'Browse-Trip',
+                          style: TextStyle(
+                            color: Colors.blueGrey,
+                          ),
+                        ),
+                      ),
+                    ),
+                      PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      print('yeh hai filteruseroperator ka value');
+                      print(filteruseroperator);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              Touroperator(data: filteruseroperator.toString()),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Tour Operator',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      print('yeh hai filteruseroperator ka value');
+                      print(filteruseroperator);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Eventpublisher(
+                              data: filteruseroperator.toString()),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Event Publisher',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      print('yeh hai filteruseroperator ka value');
+                      print(filteruseroperator);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              Websiteuser(data: filteruserweb.toString()),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Website User',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                  ],
+                ),
+              ),
+            ],
+		  
+eventsearch.dart me bhi
+
+filterevdrcont.dart me bhi
+
+filterevdrstate.dart me bhi
+
+filterevdrcity.dart me bhi
+==================================
+import 'package:holiday/homescreen/Service/service.dart';
+import 'package:holiday/homescreen/models/operator.dart';
+import 'package:holiday/homescreen/models/weburser.dart';
+import 'package:holiday/homescreen/screen/websiteuser.dart';
+import 'package:holiday/homescreen/screen/eventpub.dart';
+import 'package:holiday/homescreen/screen/touroperator.dart';
+
+eventdashboard.dart me bhi 
+
+events.dart me bhi
+
+eventgallery.dart me bhi
+
+websiteuser.dart me bhi 
+
+eventscont.dart me bhi
+
+eventsstate.dart me bhi
+
+eventscity.dart me bhi
+==========================
+         PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      print('yeh hai filteruseroperator ka value');
+                      print(filteruseroperator);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              Touroperator(data: filteruseroperator.toString()),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Tour Operator',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      print('yeh hai filteruseroperator ka value');
+                      print(filteruseroperator);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Eventpublisher(
+                              data: filteruseroperator.toString()),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Event Publisher',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+
+eventpub.dart me bhi
+
+                     PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      print('yeh hai filteruseroperator ka value');
+                      print(filteruseroperator);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              Touroperator(data: filteruseroperator.toString()),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Tour Operator',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+               
+                PopupMenuItem(
+                  child: GestureDetector(
+                    onTap: () {
+                      print('yeh hai filteruseroperator ka value');
+                      print(filteruseroperator);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              Websiteuser(data: filteruserweb.toString()),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Website User',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                ),
+
+touroperator.dart me bhi
+
+optrip.dart me bhi
+
+filterpublisherevent.dart me bhi
+
+
+8/11/2021
+
+holiday me some task kiya gaya hai 
+
+eventmy.dart file dena hai 
+
+tripdashboard.dart file bhi dena hai 
+
+13/11/2021
+Changepro.dark file me add kiya gaya manage trip
+
+  onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        filteredUsers.length.toString() != '0'
+                                            ? Managetrip(
+                                                data: email,
+                                              )
+                                            : Notrip(
+                                                data: email,
+                                              ),
+                                  ),
+                                );
+                              }),
+
+Changepro.dart me manage envent me change huaa hai 
+
+
+ onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      filteredEvent.length.toString() != '0'
+                                          ? Manageevent(
+                                              data: email,
+                                            )
+                                          : Noevetrip(
+                                              data: email,
+                                            ),
+                                ),
+                              );
+                            },
+
+Noaddtrip.dart new file add kiya gaya hai 
+
+Noeveaddtrip.dart new add kiya gaya hai 
+
+notrip.dart me total change huaa hai 
+
+
+
+15/11/2021
+
+Rakesh task now
+
+Jab hum iternary me select days karte hai to 1 days select karne pe sara days me data aa jata hai,
+
+jab hum publiher karte hai to publiher ke bad access dienied bhi hota hai 
+
+====================================== end and done by 17/11/2021============================================================
+
+
+New task comming
+
+https://api.cowin.gov.in/api/v3/vaccination/status/78418100498540/3
+
+
+em.online_location
+
+
+HL event me form me api dwora cuntry and state and city
+
+Step 1=>  events_manage_v1.6.js file me some change code
+
+432 to 478 
+		  const s = {
+                    name: "GoogleMap",
+                    props: ["event_prop", "event_ck"],
+                    mixins: [n(49075).default],
+                    data() { return { venue: null, address: null, country_id: 0, city_id: 0, state_id: 0, zipcode: null, countries: [], states: [], cities: [], latitude: null, longitude: null, online_event: 0, online_location: this.event_ck.online_location } },
+                  
+                    computed: i({}, (0, r.mapState)(["event_id", "organiser_id", "event"])),
+                    methods: i(i({}, (0, r.mapMutations)(["add", "update"])), {}, {
+                        get_countries() {
+                            axios.get(route("eventmie.myevents_countries")).then((e => { e.data.countries && (this.countries = e.data.countries) })).catch((e => {
+                                var t = Vue.helpers.axiosErrors(e);
+                                t.length && this.serverValidate(t)
+                            }))
+                        },
+                        get_states: function() {
+                            console.warn("my warning: " + this.country_id)
+                            console.warn("my warning event id: " + this.event_id)
+                            axios.get(route("eventmie.mytrips_states"), {
+                                params: {
+
+                                    my_id: this.country_id,
+                                    event_id: this.event_id
+                                }
+                            }).then((e => {
+                                console.warn("my warning: " + e.data.states)
+                                e.data.states && (this.states = e.data.states)
+                            })).catch((e => {
+                                var t = Vue.helpers.axiosErrors(e);
+                                t.length && this.serverValidate(t)
+                            }))
+                        },
+
+                        get_cities() {
+                            axios.get(route("eventmie.mytrips_cities", {
+
+
+                                my_id: this.state_id,
+
+
+                            })).then((e => {
+                                console.warn("my warning: " + e.data.cities)
+                                e.data.cities && (this.cities = e.data.cities)
+                            })).catch((e => {
+                                var t = Vue.helpers.axiosErrors(e);
+                                t.length && this.serverValidate(t)
+                            }))
+                        },
+						
+Step 2=> 14198 to  17270
+
+		          var r = function() {
+                        var e = this,
+                            t = e.$createElement,
+                            n = e._self._c || t;
+                        return n("div", { staticClass: "tab-pane active" }, [n("div", { staticClass: "panel-group" }, [n("div", { staticClass: "panel panel-default lgx-panel" }, [n("div", { staticClass: "panel-heading" }, [n("form", { ref: "form", staticClass: "lgx-contactform", attrs: { method: "POST", enctype: "multipart/form-data" }, on: { submit: function(t) { return t.preventDefault(), e.validateForm(t) } } }, [n("input", { directives: [{ name: "model", rawName: "v-model", value: e.event_id, expression: "event_id" }], attrs: { type: "hidden", name: "event_id" }, domProps: { value: e.event_id }, on: { input: function(t) { t.target.composing || (e.event_id = t.target.value) } } }), e._v(" "), n("input", { directives: [{ name: "model", rawName: "v-model", value: e.organiser_id, expression: "organiser_id" }], attrs: { type: "hidden", name: "organiser_id" }, domProps: { value: e.organiser_id }, on: { input: function(t) { t.target.composing || (e.organiser_id = t.target.value) } } }), e._v(" "), n("div", { staticClass: "form-group" }, [n("input", {
+                            directives: [{ name: "model", rawName: "v-model", value: e.online_event, expression: "online_event" }],
+                            staticClass: "custom-control-input",
+                            attrs: { type: "checkbox", name: "online_event" },
+                            domProps: { value: 1, checked: Array.isArray(e.online_event) ? e._i(e.online_event, 1) > -1 : e.online_event },
+                            on: {
+                                change: [function(t) {
+                                    var n = e.online_event,
+                                        r = t.target,
+                                        a = !!r.checked;
+                                    if (Array.isArray(n)) {
+                                        var i = e._i(n, 1);
+                                        r.checked ? i < 0 && (e.online_event = n.concat([1])) : i > -1 && (e.online_event = n.slice(0, i).concat(n.slice(i + 1)))
+                                    } else e.online_event = a
+                                }, function(t) { return e.isDirty() }]
+                            }
+                        }), e._v(" "), n("label", { staticClass: "custom-control-label" }, [e._v(e._s(e.trans("em.online_event")))])]), e._v(" "), e.online_event > 0 ? n("div", { staticClass: "form-group" }, [n("label", { attrs: { for: "online_location" } }, [e._v(e._s(e.trans("em.online_location")))]), e._v(" "), n("textarea", { staticClass: "form-control", staticStyle: { display: "none" }, attrs: { rows: "3", name: "online_location" }, domProps: { value: e.online_location } }), e._v(" "), n("ckeditor", { model: { value: e.online_location, callback: function(t) { e.online_location = t }, expression: "online_location" } }), e._v(" "), n("span", { directives: [{ name: "show", rawName: "v-show", value: e.errors.has("online_location"), expression: "errors.has('online_location')" }], staticClass: "help text-danger" }, [e._v(e._s(e.errors.first("online_location")))]), e._v(" "), n("span", { staticClass: "help-block" }, [e._v(e._s(e.trans("em.online_secret")))])], 1) : e._e(), e._v(" "),
+                        n("div", { staticClass: "form-group" }, [n("label", { attrs: { for: "venue" } }, [e._v(e._s(e.trans("em.venue")))]), e._v(" "), n("input", { directives: [{ name: "validate", rawName: "v-validate", value: "required", expression: "'required'" }, { name: "model", rawName: "v-model", value: e.venue, expression: "venue" }], staticClass: "form-control", attrs: { type: "text", name: "venue" }, domProps: { value: e.venue }, on: { change: function(t) { return e.isDirty() }, input: function(t) { t.target.composing || (e.venue = t.target.value) } } }), e._v(" "),
+                            n("span", { directives: [{ name: "show", rawName: "v-show", value: e.errors.has("venue"), expression: "errors.has('venue')" }], staticClass: "help text-danger" }, [e._v(e._s(e.errors.first("venue")))])
+                        ]), e._v(" "), n("div", { staticClass: "form-group" }, [n("label", { attrs: { for: "latitude" } }, [e._v("Google " + e._s(e.trans("em.map_lat")))]), e._v(" "),
+                            n("input", { directives: [{ name: "model", rawName: "v-model", value: e.latitude, expression: "latitude" }], staticClass: "form-control", attrs: { type: "text", name: "latitude", placeholder: "e.g 27.1751448" }, domProps: { value: e.latitude }, on: { change: function(t) { return e.isDirty() }, input: function(t) { t.target.composing || (e.latitude = t.target.value) } } })
+                        ]), e._v(" "), n("div", { staticClass: "form-group" }, [n("label", { attrs: { for: "longitude" } }, [e._v("Google " + e._s(e.trans("em.map_long")))]), e._v(" "), n("input", { directives: [{ name: "model", rawName: "v-model", value: e.longitude, expression: "longitude" }], staticClass: "form-control", attrs: { type: "text", name: "longitude", placeholder: "78.0399535" }, domProps: { value: e.longitude }, on: { change: function(t) { return e.isDirty() }, input: function(t) { t.target.composing || (e.longitude = t.target.value) } } })]), e._v(" "),
+                        n("div", { staticClass: "form-group" }, [n("label", { attrs: { for: "address" } }, [e._v(e._s(e.trans("em.venue_address")))]), e._v(" "), n("textarea", { directives: [{ name: "model", rawName: "v-model", value: e.address, expression: "address" }], staticClass: "form-control", attrs: { rows: "3", name: "address" }, domProps: { value: e.address }, on: { change: function(t) { return e.isDirty() }, input: function(t) { t.target.composing || (e.address = t.target.value) } } }), e._v(" "), n("span", { directives: [{ name: "show", rawName: "v-show", value: e.errors.has("address"), expression: "errors.has('address')" }], staticClass: "help text-danger" }, [e._v(e._s(e.errors.first("address")))])]), e._v(" "),
+
+                        n("div", { staticClass: "form-group" }, [n("label", { attrs: { for: "zipcode" } }, [e._v(e._s(e.trans("em.zipcode")))]), e._v(" "), n("input", { directives: [{ name: "model", rawName: "v-model", value: e.zipcode, expression: "zipcode" }], staticClass: "form-control", attrs: { type: "text", name: "zipcode" }, domProps: { value: e.zipcode }, on: { change: function(t) { return e.isDirty() }, input: function(t) { t.target.composing || (e.zipcode = t.target.value) } } }), e._v(" "), n("span", { directives: [{ name: "show", rawName: "v-show", value: e.errors.has("zipcode"), expression: "errors.has('zipcode')" }], staticClass: "help text-danger" }, [e._v(e._s(e.errors.first("zipcode")))])]), e._v(" "),
+
+                        n("div", { staticClass: "form-group" }, [n("label", { attrs: { for: "country_id" } }, [e._v(e._s(e.trans("em.select_country")))]), e._v(" "), n("select", {
+                            directives: [{ name: "model", rawName: "v-model", value: e.country_id, expression: "country_id" }],
+                            staticClass: "form-control",
+                            attrs: { name: "country_id" },
+                            on: {
+                                change: [function(t) {
+                                    var n = Array.prototype.filter.call(t.target.options, (function(e) { return e.selected })).map((function(e) { return "_value" in e ? e._value : e.value }));
+                                    e.country_id = t.target.multiple ? n : n[0]
+                                }, function(t) { return e.get_states() }]
+                            }
+                        },[n("option", { attrs: { value: "0" } }, [e._v("-- " + e._s(e.trans("em.country")) + " --")]), e._v(" "),
+                        e._l(e.countries, (function(t, r) { return n("option", { key: r, domProps: { value: t.country_id } }, [e._v(e._s(t.country_name))]) }))
+                    ], 2), e._v(" "), n("span", { directives: [{ name: "show", rawName: "v-show", value: e.errors.has("country_id"), expression: "errors.has('country_id')" }], staticClass: "help text-danger" }, [e._v(e._s(e.errors.first("country_id")))])]), e._v(" "),
+                    n("div", { staticClass: "form-group" }, [n("label", { attrs: { for: "state_id" } }, [e._v(e._s(e.trans("em.select_state")))]), e._v(" "), n("select", {
+                        directives: [{ name: "model", rawName: "v-model", value: e.state_id, expression: "state_id" }],
+                        staticClass: "form-control",
+                        attrs: { name: "state_id" },
+                        on: {
+                            change: [function(t) {
+                                var n = Array.prototype.filter.call(t.target.options, (function(e) { return e.selected })).map((function(e) { return "_value" in e ? e._value : e.value }));
+                                e.state_id = t.target.multiple ? n : n[0]
+                            }, function(t) { return e.get_cities() }]
+                        }
+                    }, [n("option", { attrs: { value: "0" } }, [e._v("-- " + e._s(e.trans("em.state")) + " --")]), e._v(" "),
+                        e._l(e.states, (function(t, r) { return n("option", { key: r, domProps: { value: t.state_id } }, [e._v(e._s(t.state_name))]) }))
+                    ], 2), e._v(" "), n("span", { directives: [{ name: "show", rawName: "v-show", value: e.errors.has("state_id"), expression: "errors.has('state_id')" }], staticClass: "help text-danger" }, [e._v(e._s(e.errors.first("state_id")))])]), e._v(" "),
+
+                    n("div", { staticClass: "form-group" }, [n("label", { attrs: { for: "city_id" } }, [e._v(e._s(e.trans("em.select_city")))]), e._v(" "), n("select", {
+                        directives: [{ name: "model", rawName: "v-model", value: e.city_id, expression: "city_id" }],
+                        staticClass: "form-control",
+                        attrs: { name: "city_id" },
+                        on: {
+                            change: [function(t) {
+                                var n = Array.prototype.filter.call(t.target.options, (function(e) { return e.selected })).map((function(e) { return "_value" in e ? e._value : e.value }));
+                                e.city_id = t.target.multiple ? n : n[0]
+                            }, function(t) { return e.isDirty() }]
+                        }
+                    }, [n("option", { attrs: { value: "0" } }, [e._v("-- " + e._s(e.trans("em.city")) + " --")]), e._v(" "),
+                        e._l(e.cities, (function(t, r) { return n("option", { key: r, domProps: { value: t.city_id } }, [e._v(e._s(t.city_name))]) }))
+                    ], 2), e._v(" "), n("span", { directives: [{ name: "show", rawName: "v-show", value: e.errors.has("city_id"), expression: "errors.has('city_id')" }], staticClass: "help text-danger" }, [e._v(e._s(e.errors.first("city_id")))])]), e._v(" "),
+                    n("button", { staticClass: "btn lgx-btn btn-block", attrs: { type: "submit" } }, [n("i", { staticClass: "fas fa-sd-card" }), e._v(" " + e._s(e.trans("em.save")))])
+                ])])])])])
+            },
+			
+			
+Step 3=> MyEventsController.php
+
+  public function store_location(Request $request)
+    {
+        Log::info('In store trip timing dharmu');
+        $input = $request->all();
+        Log::info($request);
+        // if logged in user is admin
+        $this->is_admin($request);
+
+        $trips=  Event::where('id',$request->event_id)
+                   
+        ->first();
+        $user_id= $trips->user_id;
+        $trips_country=  Countries::where('country_id',$request->country_id)
+             
+        ->first();
+        $trips_contname=$trips_country->country_name;
+        $trips_state=  State::where('state_id',$request->state_id)
+               
+        ->first();
+        $trips_statename=$trips_state->state_name;
+
+        $lowerstate = strtolower($trips_statename);
+        $slug2 = str_replace(" ", "-", $lowerstate);
+
+        $getCountryName = $trips_contname;
+        $Countriess =str_slug($getCountryName);
+        $Statename =  $slug2; 
+        $States =str_slug($Statename);
+        $country_state=collect([$Countriess, $States])->implode('/');
+        $trips_city=  City::where('city_id',$request->city_id)
+            
+        ->first();
+        $trips_cityname=$trips_city->city_name;
+        $lowercity = strtolower($trips_cityname);
+        $slug1 = str_replace(" ", "-", $trips_cityname);
+
+        $getCityName = $slug1;
+        Log::info('yaha slug dharmu');
+        Log::info($slug1);
+        Log::info($lowercity);
+        $cities = str_slug($getCityName); 
+        $country_state_city=collect([$Countriess, $States,$cities])->implode('/');
+
+
+
+        
+    //     $lower = strtolower($request->country_id);
+    //     $myslug = str_replace(" ", "-", $lower);
+    //     $Country=Country::where("id" , $myslug)->first();
+    //     $slug3=$Country->country_name;
+    //     $lowerstate = strtolower($request->state);
+    //     $slug2 = str_replace(" ", "-", $lowerstate);
+    //    $lowercity = strtolower($request->city);
+    //     $slug1 = str_replace(" ", "-", $lowercity);
+    //     $getCountryName = $slug3;
+    //     $Countriess =str_slug($getCountryName);
+    //     $Statename =  $slug2; 
+    //     $States =str_slug($Statename);
+    //     $country_state=collect([$Countriess, $States])->implode('/');
+    //     $getCityName = $slug1;
+    //     $cities = str_slug($getCityName); 
+    //     $country_state_city=collect([$Countriess, $States,$cities])->implode('/');
+        // 1. validate data
+        $request->validate([
+            'event_id'          => 'required|numeric|min:1|regex:^[1-9][0-9]*$^',
+            'country_id'        => 'numeric|min:0',
+            'venue'             => 'required|max:256',
+            'address'           => 'max:512',
+            'city'              => 'max:256',
+            'state'             => 'max:256',
+            'zipcode'           => 'max:64',
+            'latitude'          => ['nullable','regex:/^[-]?(([0-8]?[0-9])\.(\d+))|(90(\.0+)?)$/'],
+            'longitude'         => ['nullable','regex:/^[-]?((((1[0-7][0-9])|([0-9]?[0-9]))\.(\d+))|180(\.0+)?)$/'],
+            'online_location'   => 'nullable|string',
+            'state_id' => 'required|string|max:255',
+            'city_id' => 'required|string|max:255',
+        ]);
+
+
+        $params = [
+            "country_id"    => $request->country_id,
+            'state_id' => $request->state_id,
+            'city_id' => $request->city_id,
+
+            "venue"         => $request->venue,
+            "address"       => $request->address,
+            "city"          => $request->city,
+            "zipcode"       => $request->zipcode,
+            "slug3"       =>  $trips_contname,
+            "slug2"         => $slug2,
+            "slug1"         => $slug1,
+
+            "country_state"  =>$country_state,
+            "country_state_city"=>$country_state_city,
+            "state"         => $request->state,
+            "latitude"      => $request->latitude,
+            "longitude"     => $request->longitude,
+            "online_location" => $request->online_location
+        ];
+
+        // only at the time of event create
+        if(!$request->event_id)
+        {
+            $params["user_id"]       = $this->organiser_id;
+        }
+
+        // check this event id have login user or not
+        $check_event    = $this->event->get_user_event($request->event_id, $this->organiser_id);
+       
+
+        $location   = $this->event->save_event($params, $request->event_id);
+        if(empty($location))
+        {
+            return error('Database failure!', Response::HTTP_BAD_REQUEST );
+        }
+
+        // get update event
+        $event    = $this->event->get_user_event($request->event_id, $this->organiser_id);
+        
+        // set step complete
+        $this->complete_step($event->is_publishable, 'location', $request->event_id);
+        
+        return response()->json(['status' => true, 'event' => $event]);
+    }     			
+	
+	
+	
+	C:\xampp\htdocs\holiday\vendor\classiebit\eventmie-pro\resources\js\common_components\EventListing.vue
+	
+	
+	https://www.thrillophilia.com/
+	
+	
+	
+	
+	https://themewagon.com/loginsign-up-form-to-compliment-your-website/

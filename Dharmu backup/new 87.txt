@@ -1,0 +1,370 @@
+hp distubuter code - 19643800
+
+
+
+
+6069 9800 6962 	6180
+02/25
+886
+
+Account internet baking
+
+id-
+@98Dharmu@ loging 
+
+98@Dharmu@ tration password
+
+moviedowloade9898@gmail.com
+dk150696
+
+020-2721 8080 CALL CENTER
+881035184459113 Sandhya kumari
+
+bablu8651190730@gmail.com
+p/s- bk171020
+
+pan card track number => EA724731701IN
+
+0082565963
+
+23/10 465
+
+	
+
+
+
+insidious the last key
+
+the cabin in the woods
+
+jurassic world
+
+immortal wars
+
+tomb raider
+anti matter
+
+jack the glant slayer
+
+
+
+0185104000181051
+
+
+bahaduranil525
+Anil@525
+
+voter id
+Arti@10082003
+
+amil pan card sudhar
+0083913634
+
+1947
+
+
+web site b
+
+5. moviezaddiction
+4. 9xmovies
+3. movies123
+2. world4ufree
+1. katmoviehd
+namespace Illuminate\Database;
+
+anil100595
+ 
+PAN application 881035294045491 Anil   EA540874558IN
+
+PAN application 881035193985940 paro  EA538472975IN
+
+EA538472975IN
+
+
+8105843520
+
+
+
+
+Kanhaiya pnr- 6564028321
+
+
+
+
+
+
+man 
+
+7439658115
+
+
+
+CAFM Admin/Operator Post
+
+ 46336
+ 
+ 60893 java
+ 
+ 75974 html
+ 
+ 
+ value: e.title
+ 
+ titleevent
+ 
+ evquantity
+ 
+ https://www.devopsschool.com/blog/how-to-create-multiple-role-based-authentication-and-access-control-in-laravel-application/
+ 
+ 
+CSRF => Cross-Site Request Forgery 
+
+Event Manage
+
+How to change anything Event
+
+Data , edit part moute and html part 
+
+=============ticket Tab===========
+
+60893 Tikact ka Store java 
+
+75974 This is Html part 
+
+=============Details Tab=========== 
+
+9330 Details ka Store java  
+
+84733 This is Html part  
+
+============= Timing Tab ===========  
+
+57207 Timing ka Store java  
+
+54058 This is Html part   
+
+
+=============Location Tab===========   
+
+51971 Location ka Store java   
+
+800 This is Html part   
+
+
+=============Media Tab===========   
+
+84707 Media ka Store java   
+
+8568 This is Html part  
+
+=============Seo Tab===========     
+
+43419 Seo ka Store java    
+
+69148 This is Html part    
+
+
+
+
+How to change anything Trip    
+
+Data , edit part moute and html part    
+
+=============Details Tab===========   
+
+9330 Tikact ka Store java   
+
+84733 This is Html part 
+
+=============Timing Tab===========   
+
+57207 Timing ka Store java 
+
+54058 This is Html part 
+
+=============Price Tab===========   
+
+46336 Price ka Store java 
+
+53569 This is Html part
+
+=============Location Tab===========   
+
+51971 location ka Store java 
+
+800 This is Html part 
+
+=============Iternary Tab===========   
+
+60893 Iternary ka Store java 
+
+54569 View Html part
+
+75974 This is popup Html part
+
+=============Media Tab===========   
+
+84707 Media ka Store java 
+
+
+8568 This is Html part
+
+=============Event  checkout===========    
+
+65527 Checkout ka Store java 
+
+
+18431 This is Html part
+
+========= boking ka data ===============
+9501 java
+
+63208 html
+
+
+
+=========== manage Trip ==============
+48894  Java
+
+99753   html
+
+=========== manage trip booking ==============
+9501  Java
+
+63208   html
+
+
+=========== payment cancelation trip booking ==============
+55971  Java
+
+801   html
+
+======= new tab banane ke lie =========
+96437 ish line me bhi later alphalatter dene parta hai,
+77642
+
+   96437: (e, t, n) => {
+                "use strict";
+                n.r(t);
+                var r = n(20629),
+                    a = n(72471),
+                    i = n.n(a),
+                    o = n(67756),
+                    s = n.n(o),
+                    c = n(68067),
+                    u = n.n(c),
+                    l = n(54737),
+                    z = n(78072),
+                    d = n(64076),
+                    f = n(79071),
+
+                    p = n(81131),
+                    h = n(40845),
+                    m = n(12269),
+                    _ = n(73674);
+                n(79571),
+				
+				
+				 M = new VueRouter({
+                        linkExactActiveClass: "active",
+                        routes: [
+                            { path: "/", name: "detail", component: l.default, props: !0, beforeEnter(e, t, n) { g(e, t, n) } },
+                            { path: "/media", name: "media", component: d.default, props: !0, beforeEnter(e, t, n) { g(e, t, n) } }, { path: "/seo", name: "seo", component: _.default, props: !0, beforeEnter(e, t, n) { g(e, t, n) } },
+                            { path: "/location", name: "location", component: f.default, props: !0, beforeEnter(e, t, n) { g(e, t, n) } },
+                            { path: "/iternary", name: "iternary", component: z.default, props: !0, beforeEnter(e, t, n) { g(e, t, n) } },
+                            { path: "/timing", name: "timing", component: p.default, props: !0, beforeEnter(e, t, n) { g(e, t, n) } },
+                            { path: "/tickets", name: "tickets", component: h.default, props: !0, beforeEnter(e, t, n) { g(e, t, n) } },
+                            { path: "/payment", name: "payment", component: y.default, props: !0, beforeEnter(e, t, n) { g(e, t, n) } },
+                            { path: "/publish", name: "publish", component: m.default, props: !0, beforeEnter(e, t, n) { g(e, t, n) } }
+                        ]
+                    });
+				
+				
+				79052
+				
+				37528=> 8598
+				
+				99555`=> 84717
+
+
+tripbookings
+7718945801
+
+8543841216
+
+https://www.holidaylandmark.com/blog/wp-login.php?action=register
+propus, data, edit, route
+
+
+Props=> proparty hota hai 
+
+Null -sting
+id- interjar
+categories [] get array 
+
+cumputed 
+
+npm install vue2-datepicker
+
+vue fluke
+
+
+Website
+
+Mobile Number: Verified | Not-Verified
+Email ID: Verified  |  Not-Verified
+Passport: Verified | Not-Verified
+
+List Of Trips 
+Trip Name    |Enrolled|Start Date | End Date |Status
+
+
+
+
+
+Windows encountered a problem installing the drivers for your device
+
+
+  $addrequest = new Rvsp();
+                    DB::table('trips')
+                  ->where('id', $request->tourtitle)
+                  ->increment('Subscriber', 1);
+                 
+                   $addrequest->Phoneno =  $request->Phoneno;
+                   $addrequest->status =  1;
+                   $addrequest->visit_trip =  1;
+                   $addrequest->tour_id =  $trip_id;
+                   $addrequest->TripHeading =  $sub;
+                                 $addrequest->save();
+								 
+
+Cambly 
+
+
+Ctrl + U	Convert to lower case 
+
+
+
+<VirtualHost *:80>
+    ServerAdmin hl-events
+    DocumentRoot "C:/xampp/htdocs/hl-events/public"
+    ServerName hl-events
+    ErrorLog "logs/hl-events"
+    CustomLog "logs/hl-events" common
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin holiday
+    DocumentRoot "C:/xampp/htdocs/holiday/public"
+    ServerName holiday
+    ErrorLog "logs/holiday"
+    CustomLog "logs/holiday" common
+</VirtualHost>
+
+6101153751
+
+Cashier level Supervisor
+
+Accredatation & Visa Checking Assistant
+
+Cashier

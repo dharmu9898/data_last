@@ -1,0 +1,1 @@
+vmware--is example of ssh remote login

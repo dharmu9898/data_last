@@ -1,0 +1,63 @@
+Header blade me 
+
+   <li>
+      <a class="lgx-scroll" href="{{ route('eventmie.organizors') }}" >Organisers</a>
+   </li>
+   
+   
+Web.php
+
+Route::prefix('/organizors')->group(function () use ($namespace) {
+    $tripcontroller = $namespace.'\TourController';
+
+  Route::get('/', "$tripcontroller@alltouropreter")->name('organizors');
+  Route::get('/{slug}', "$tripcontroller@touropreter")->name('opreterdetail');
+
+});
+
+TourController.blade file
+
+
+  public function alltouropreter(Request $request, $organizors ,$view = 'eventmie::trip.all_touro_perator')
+    {
+     log::info('alltouropreter aa raha hai');
+     $allwebsiteuser          = $this->userevent->all_operator_user();
+     log::info('yaha tak aa raha details');
+     log::info($allwebsiteuser);
+ 
+      return Eventmie::view($view, compact('allwebsiteuser'))->render();
+    }
+	
+	
+	 public function touropreter(Request $request,$name, $view = 'eventmie::trip.touro_perator')
+    {
+     log::info('yaha aa eaha ');
+      log::info($name);
+ 
+      $touropretor = Userevent::where('role_id','3')->where('slug',$name)->first();
+      $email = $touropretor->email;
+      log::info('user ka data aa raha hai');
+      log::info($email);
+      $user = Userevent::where('email',$email)->first();
+      $user_id = $user->id;
+      $trip = Trip::where('operator_email',$email)->get();
+      log::info('trip ka data aa raha hai');
+      log::info($trip);
+      log::info('tripvisit ka title data aa raha hai');
+ 
+ 
+       $current_date_time   = Carbon::now()->toDateString();
+     //  $tripvisit = $trip->title;
+      log::info(' current_date_time trip ka title data aa raha hai');
+      log::info($current_date_time);
+      
+      $event = Event::leftJoin('countries','events.country_id', '=', 'countries.id')
+      ->leftJoin('categories','events.category_id', '=', 'categories.id')
+      ->select('events.*','countries.country_name','categories.name')->where('user_id',$user_id)->get();
+      log::info($event);
+    
+ 
+      return Eventmie::view($view, compact('touropretor','trip','event','current_date_time'))->render();
+    }
+	
+	

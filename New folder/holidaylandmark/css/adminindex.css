@@ -1,0 +1,56 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+body{
+  overflow-x:hidden;
+  font-family: "Times New Roman", Times, serif;
+}
+.tab1{
+margin-left:-1%;
+}
+
+table{
+    font-family: "Times New Roman", Times, serif;
+}
+th{
+    font-family: "Times New Roman", Times, serif;
+
+}
+td{
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+tr{
+    font-family: "Times New Roman", Times, serif;
+
+}
+.myrow
+{
+    margin-left:245px;  
+}
+
+th {
+  font-size: 15px;
+}
+td {
+  font-size: 16px;
+}
+.action
+{
+  padding-left:60px;
+}
+
+
+.table td, .table th {
+    padding: 0.4rem;
+  
+}
+ .content3 {
+  position: absolute;
+  bottom: 0;
+  font-size:18px;
+  color: #f1f1f1;
+  width: 100%;
+
+}

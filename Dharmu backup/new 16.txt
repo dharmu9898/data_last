@@ -1,0 +1,29 @@
+<!--GOOGLE MAP-->
+@if($event->latitude && $event->longitude)
+<div class="innerpage-section g-map-wrapper" style="margin-top:-8%; margin-bottom:-6%; text-align: center;">
+    <div class="lgxmapcanvas map-canvas-default">
+        <a href="https://www.google.com/maps/place/{{ $event->latitude }}+{{ $event->longitude }}"
+            style="color:#2149BD;">
+            <span style="margin-left:10px;font-size:30px;"><i class="fas fa-directions"></i></span>
+            <span style="font-size:30px;background-color:blue;color:white;border-radius:10px; ">View larger map<span
+                    style="margin-left:10px;font-size:14px;">({{ $event->address }}</span><span
+                    style="margin-left:10px;font-size:14px;">latitude:{{ $event->latitude }},longitude:{{ $event->longitude }}
+                    <i class="far fa-hand-point-right float-right">click here</i></span></span>
+
+            <g-component :lat="{{ json_encode($event->latitude, JSON_HEX_APOS) }}"
+                :lng="{{ json_encode($event->longitude, JSON_HEX_APOS) }}">
+            </g-component>
+        </a>
+    </div>
+</div>
+@endif
+<!--GOOGLE MAP END-->
+
+
+
+Rigiter.blade file 
+ <form method="POST" action="{{ route('eventmie.register_activate') }}"
+ 
+ Rigiter controller 
+ 
+  return Eventmie::view('eventmie::auth.register_activate',compact('email','name'));
